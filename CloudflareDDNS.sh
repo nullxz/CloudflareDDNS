@@ -7,7 +7,8 @@ comment="" # comment ไม่ต้องใส่ก็ได้
 # Auth API token ตัวอย่าง LlEyQZRx7cFfCy3ab6XLNw42ObnFbfYj
 # Auth API token example LlEyQZRx7cFfCy3ab6XLNw42ObnFbfYj
 auth=""
-ttl="" # 300 = 5 minutes, 3600 = 1hour 
+ttl="" # 300 = 5 minutes, 3600 = 1hour
+proxy="false" # false / true
 #####################################################################################
 #
 #
@@ -33,7 +34,7 @@ curl --request PUT \
   --data "{
   \"content\": \"$ip\",
   \"name\": \"$name\",
-  \"proxied\": false,
+  \"proxied\": $proxy,
   \"type\": \"A\",
   \"comment\": \"$comment\",
   \"ttl\": $ttl
