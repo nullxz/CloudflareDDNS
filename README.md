@@ -1,15 +1,17 @@
 # CloudflareDDNS
 #### EN
 >#### Requires curl grep bash crontab
+>#### IPv4 Only
 >
 >Create DDNS using Cloudflare API
 >
->It should be used in conjunction with crontab.
+>It should be used with crontab.
 >
 > `* * * * * /home/USER/cloudflareddns.sh >/dev/null 2>&1`
 
 #### TH
 >#### ต้องมี curl grep bash crontab
+>#### IPv4 เท่านั้น
 > สร้าง DDNS โดยใช้ Cloudflare API
 > 
 > ควรใช้คู่กับ crontab
