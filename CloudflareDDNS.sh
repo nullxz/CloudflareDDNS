@@ -53,7 +53,7 @@ RESPONSE=$(curl -s --request PUT \
 }")
 
 SUCCESS=$(echo "$RESPONSE" | grep -o '"success":true')
-if [[ "$SUCCESS" == "\"success\":true" ]]; then
+if [ "$SUCCESS" = "\"success\":true" ]; then
 	echo "$RESPONSE"
 	echo "[ OK ]"
 else
