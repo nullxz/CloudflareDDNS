@@ -24,11 +24,11 @@ ZONEDNS=$(curl -s -X GET "https://api.cloudflare.com/client/v4/zones/$ZONEID/dns
 
 case $IPv in
 	4)
-		DATA=$(curl -s https://api.cloudflare.com/cdn-cgi/trace | awk -F= '/ip=([0-9.]+)/ {print $2}')
+		DATA=$(curl -4 -s https://api.cloudflare.com/cdn-cgi/trace | awk -F= '/ip=([0-9.]+)/ {print $2}')
 		TYPE="A"
 	;;
 	6)
-		DATA=$(curl -s https://api.cloudflare.com/cdn-cgi/trace | awk -F= '/ip=([0-9a-fA-F:]+)/ {print $2}')
+		DATA=$(curl -6 -s https://api.cloudflare.com/cdn-cgi/trace | awk -F= '/ip=([0-9a-fA-F:]+)/ {print $2}')
 		TYPE="AAAA"
 	;;
 	*)
